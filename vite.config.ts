@@ -14,7 +14,10 @@ export default defineConfig(({ mode }) => {
       "process.env.API_KEY": JSON.stringify(env.GEMINI_API_KEY),
       "process.env.GEMINI_API_KEY": JSON.stringify(env.GEMINI_API_KEY),
     },
-    base: "/calculadora-st",
+    // Use a relative base for local preview/builds to avoid absolute `/` paths
+    // which cause 404/MIME issues when opening `dist/index.html` with a simple file/server.
+    // Keep the GitHub Pages base for production builds.
+    base: mode === "production" ? "/calculadora-st/" : "./",
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "."),
