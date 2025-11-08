@@ -1,0 +1,5 @@
+{
+  "name": "Calculadora de ICMS-ST",
+  "description": "Uma aplicação para importar e analisar arquivos XML de NF-e (modelo 55), extrair dados de produtos e impostos, e calcular o ICMS Substituição Tributária (ST) com base na legislação de Pernambuco, aprimorado com análise da API Gemini.",
+  "requestFramePermissions": []
+}
